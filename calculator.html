@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    justify-content: center;
+
+  }
+
+  button {
+    flex-basis: calc(25% - 2px);
+    box-sizing: border-box;
+    height: 40px;
+    font-size: 25px;
+    background-color: #1a1a1a;
+    color: #ececec;
+  }
+
+  button:hover {
+    background-color: #ececec;
+    color: #1a1a1a;
+  }
+
+  .result {
+    background-color: #ececec;
+    color: #1a1a1a;
+  }
+
+  .result:hover {
+    background-color: red;
+    color: #ececec;
+  }
+
+  .mark {
+    background-color: #ffa346;
+  }
+
+  .mark:hover {
+    background-color: #fa7f03;
+  }
+
+  .reset {
+    background-color: red;
+  }
+
+  .reset:hover {
+    background-color: red;
+  }
+</style>
+
+<body>
+
+  <div class="container">
+    <button onclick="calculation+='7'; console.log(calculation)">7</button>
+    <button onclick="calculation+='8'; console.log(calculation)">8</button>
+    <button onclick="calculation+='9'; console.log(calculation)">9</button>
+    <button class="mark" onclick="calculation+='/'; console.log(calculation)">/</button>
+
+    <button onclick="calculation+='4'; console.log(calculation)">4</button>
+    <button onclick="calculation+='5'; console.log(calculation)">5</button>
+    <button onclick="calculation+='6'; console.log(calculation)">6</button>
+    <button class="mark" onclick="calculation+='*'; console.log(calculation)">*</button>
+
+    <button onclick="calculation+='1'; console.log(calculation)">1</button>
+    <button onclick="calculation+='2'; console.log(calculation)">2</button>
+    <button onclick="calculation+='3'; console.log(calculation)">3</button>
+    <button class="mark" onclick="calculation+='-'; console.log(calculation)">-</button>
+
+    <button onclick="calculation+='0'; console.log(calculation)">0</button>
+    <button class="reset" onclick="calculation=''; console.log(calculation)">C</button>
+    <button class="result" onclick="calculation=eval(calculation); console.log(calculation)">=</button>
+    <button class="mark" onclick="calculation+='+'; console.log(calculation)">+</button>
+
+  </div>
+
+  <script>
+    let calculation = '';
+  </script>
+
+</body>
+
+</html>
